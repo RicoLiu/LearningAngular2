@@ -3,6 +3,12 @@ logs
 *.log
 npm-debug.log*
 
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
 # Runtime data
 pids
 *.pid
