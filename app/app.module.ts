@@ -6,7 +6,7 @@ import { AppComponent }  from './app.component';
 import { DashboardComponent } from "./dashboard.component";
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent } from './heroes.component';
-import { HeroesService } from './hero.service';
+import { HeroService } from './hero.service';
 import { routing } from './app.routing'
 
 @NgModule({
@@ -21,8 +21,8 @@ import { routing } from './app.routing'
         HeroDetailComponent,
         HeroesComponent
     ],
-    provider: [
-        HeroesService
+    providers: [
+        HeroService
     ],
     bootstrap: [ AppComponent ]
 })

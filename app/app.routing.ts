@@ -3,13 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from "./dashboard.component";
 import { HeroesComponent } from './heroes.component';
-import { HeroesDetailComponent } from './hero-detail.component'
+import { HeroDetailComponent } from './hero-detail.component';
 
 const appRoutes: Routes = [
     {
         path: '',
         redirectTo: '/dashboard',
-        pathMath: 'full'
+        pathMatch: 'full'
     },
     {
         path: 'dashboard',
@@ -17,7 +17,7 @@ const appRoutes: Routes = [
     },
     {
         path: 'detail/:id',
-        component: HeroesDetailComponent
+        component: HeroDetailComponent
     },
     {
         path: 'heroes',
