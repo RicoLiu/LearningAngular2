@@ -20,7 +20,6 @@ import {appRoutes} from './app.routes';
 import { ChartComponent } from './chart/chart.component';
 import { EChartOptionDirective1 } from './chart/echart-option.directive';
 import { UseJqueryComponent } from './use-jquery/use-jquery.component';
-import { operatorPermissionComponent } from './operator/operator-permission.component'
 
 export function createTranslateLoader(http: Http) {
     return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -34,8 +33,7 @@ export function createTranslateLoader(http: Http) {
     EqualValidator,
     EChartOptionDirective1,
     ChartComponent,
-    UseJqueryComponent,
-    operatorPermissionComponent
+    UseJqueryComponent
   ],
   imports: [
     BrowserModule,

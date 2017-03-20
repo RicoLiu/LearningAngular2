@@ -6,7 +6,6 @@ import { ForgetPwdComponent } from './user/forget-pwd/forget-pwd.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { ChartComponent } from './chart/chart.component';
 import { UseJqueryComponent } from './use-jquery/use-jquery.component';
-import { operatorPermissionComponent } from './operator/operator-permission.component';
 
 export const appRoutes=[
 	{
@@ -53,7 +52,7 @@ export const appRoutes=[
 	},
 	{
 		path: 'operator',
-		component: operatorPermissionComponent 
+		loadChildren: './operator/operator.module#OperatorModule' 
 	},
 	{
 		path:'**',//fallback router must in the last
