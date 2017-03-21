@@ -14,10 +14,24 @@ import { OperatorService } from './services/operator.service'
 })
 
 export class OperatorPermissionComponent implements OnInit {
-    operators: string[]
+    operators: string[];
+    showOperator: Boolean;
 
     constructor(operatorService: OperatorService) { 
-        this.operators = operatorService.getOperatorService()
+        this.operators = operatorService.getOperatorService();
+        this.showOperator = true;
+    }
+
+    ToggleShow() {
+        this.showOperator = !this.showOperator;
+    }
+
+    AddOperator(operator) {
+        this.operators.push(operator);
+    }
+
+    DeleteOperator(i) {
+        this.operators.splice(i, 1);
     }
 
     ngOnInit() {

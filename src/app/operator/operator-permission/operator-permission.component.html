@@ -1,8 +1,17 @@
 <div [@flyIn]="active">
     <p>this is a operator list</p>
     <ul>
-        <li *ngFor="let operator of operators">
+        <li *ngFor="let operator of operators; let i = index">
             {{ operator }}
+            <button type="button" (click)="DeleteOperator(i)">X</button>
         </li>
     </ul>
+    <button type="button" (click)="ToggleShow()">{{showOperator ? "Hide operator" : "Show operator"}}</button>
+    <div *ngIf="showOperator">
+        <p>this is a ngIf div</p>
+    </div>
+    <div>
+        <input type="text" [(ngModel)]="operator">
+        <button type="button" (click)="AddOperator(operator)">Add operator</button>
+    </div>
 </div>
