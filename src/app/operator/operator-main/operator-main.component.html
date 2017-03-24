@@ -1,13 +1,14 @@
 <div class="operator-main-container">
     <div class="row">
-        <div class="col-sm-9">
-            <router-outlet></router-outlet>
-        </div>
         <div class="col-sm-3">
             <div class="list-group">
-                <a routerLink="list" class="list-group-item"><span class="badge">10000</span>operator-list</a>
-                <a routerLink="about" class="list-group-item"><span class="badge">1000000</span>operator-about</a>
+                <a routerLink="dashboard" class="list-group-item">Dashboard</a>
+                <a routerLink="list" class="list-group-item">operator-list</a>
+                <a routerLink="about" class="list-group-item">operator-about</a>
             </div>
+        </div>
+        <div class="col-sm-9">
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

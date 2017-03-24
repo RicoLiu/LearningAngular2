@@ -6,6 +6,7 @@ import { PaginationModule } from 'ng2-bootstrap';
 import { OperatorAboutComponent } from './operator-about/operator-about.component';
 import { OperatorPermissionComponent } from './operator-permission/operator-permission.component';
 import { OperatorMainComponent } from './operator-main/operator-main.component';
+import { OperatorDashBoardComponent } from './operator-dashboard/operator-dashboard.component';
 import { OperatorService } from './operator-permission/services/operator.service';
 import { OperatorAboutService } from './operator-about/services/operator-about.service';
 
@@ -21,7 +22,8 @@ import { operatorRoutes } from './operator.routes';
     declarations: [
         OperatorPermissionComponent,
         OperatorAboutComponent,
-        OperatorMainComponent
+        OperatorMainComponent,
+        OperatorDashBoardComponent
     ],
     exports: [
         OperatorMainComponent
