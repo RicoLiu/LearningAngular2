@@ -17,9 +17,13 @@ export class OperatorPermissionComponent implements OnInit {
     operators: string[];
     showOperator: Boolean;
 
-    constructor(operatorService: OperatorService) { 
+    constructor(private operatorService: OperatorService) { 
         this.operators = operatorService.getOperatorService();
         this.showOperator = true;
+    }
+
+    ngOnInit() {
+        this.operators =  this.operatorService.getOperatorService();
     }
 
     ToggleShow() {
@@ -34,7 +38,5 @@ export class OperatorPermissionComponent implements OnInit {
         this.operators.splice(i, 1);
     }
 
-    ngOnInit() {
-
-    }
+    
 }

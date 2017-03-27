@@ -1,7 +1,16 @@
+import { Injectable } from '@angular/core';
+import { Init } from '../init-operator'
 
+@Injectable()
+export class OperatorService extends Init {
+    constructor() {
+        super();
+        this.load();
+    }
 
-export class OperatorService {
     getOperatorService(): string[] {
-        return ['operator1', 'operator2', 'operator3'];
+        const operators = JSON.parse(localStorage.getItem('operators'));
+
+        return operators;
     }
 }

@@ -1,4 +1,8 @@
 <div [@flyIn]="active">
+    <div>
+        <input type="text" [(ngModel)]="operator">
+        <button type="button" (click)="AddOperator(operator)">Add operator</button>
+    </div>
     <p>this is a operator list</p>
     <ul>
         <li *ngFor="let operator of operators; let i = index">
@@ -10,8 +14,5 @@
     <div *ngIf="showOperator">
         <p>this is a ngIf div</p>
     </div>
-    <div>
-        <input type="text" [(ngModel)]="operator">
-        <button type="button" (click)="AddOperator(operator)">Add operator</button>
-    </div>
+    
 </div>
