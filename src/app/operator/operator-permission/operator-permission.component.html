@@ -1,12 +1,16 @@
 <div [@flyIn]="active">
-    <div>
+    <div *ngIf="!modifyOperator">
         <input type="text" [(ngModel)]="operator">
         <button type="button" (click)="AddOperator(operator)">Add operator</button>
+    </div>
+    <div *ngIf="modifyOperator">
+        <input type="text" [(ngModel)]="modify_Operator" (ngModelChange)="doSomething($event)">
+        <button type="button" (click)="ModifyOperator()">Modify Operator</button>
     </div>
     <p>this is a operator list</p>
     <ul>
         <li *ngFor="let operator of operators; let i = index">
-            {{ operator }}
+            <span (click)="EditOperator(operator)">{{ operator }}</span>
             <button type="button" (click)="DeleteOperator(i)">X</button>
         </li>
     </ul>
