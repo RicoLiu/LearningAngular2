@@ -1,38 +1,29 @@
 import { NgModule } from '@angular/core';
-import { SharedModule} from '../shared/shared.module';
+import { CommonModule } from '@angular/common';
+import { PostComponent } from './post.component';
 import { RouterModule } from '@angular/router';
-import { PaginationModule } from 'ng2-bootstrap';
-
-import { PostDetailComponent } from './post-detail/post-detail.component';
-import { PostlistComponent } from './postlist/postlist.component';
-import { PostlistService } from './postlist/services/postlist.service';
-import { PostDetailService } from './post-detail/services/post-detail.service';
-import { PostDetailMainComponent } from './post-detail-main/post-detail-main.component';
-import { AddCommentComponent } from '../comment/add-comment/add-comment.component';
-import { CommentService } from '../comment/services/comment.service';
-import { BooleanPipe } from '../utils/boolean-pipe';
-
-import {postRoutes} from './post.routes';
+import { postRoutes } from './post.routes';
+import { PostTableComponent } from './post-table/post-table.component';
+import { WritePostComponent } from './write-post/write-post.component';
+import { PostTableService } from './post-table/services/post-table.service';
+import { PaginationModule, ModalModule } from 'ng2-bootstrap';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-    imports: [
-        SharedModule,
-        RouterModule,
-        PaginationModule.forRoot(),
-        RouterModule.forChild(postRoutes)
-    ],
-    exports: [BooleanPipe],
-    declarations: [
-        PostlistComponent,
-        PostDetailMainComponent,
-        PostDetailComponent,
-        AddCommentComponent,
-        BooleanPipe
-    ],
-    providers: [
-        PostlistService,
-        PostDetailService,
-        CommentService
-    ]
+imports: [
+    CommonModule,
+    SharedModule,
+    PaginationModule.forRoot(),
+    ModalModule.forRoot(),
+    RouterModule.forChild(postRoutes)
+  ],
+  declarations: [
+    PostComponent,
+    PostTableComponent,
+    WritePostComponent
+  ],
+  providers: [
+    PostTableService
+  ]
 })
 export class PostModule { }

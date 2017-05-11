@@ -12,7 +12,8 @@
     "eofline": true,
     "forin": true,
     "indent": [
-      false
+      true,
+      "spaces"
     ],
     "label-position": true,
     "label-undefined": true,
@@ -46,7 +47,7 @@
     "no-shadowed-variable": true,
     "no-string-literal": false,
     "no-switch-case-fall-through": true,
-    "no-trailing-whitespace": false,
+    "no-trailing-whitespace": true,
     "no-unused-expression": true,
     "no-unused-variable": true,
     "no-unreachable": true,

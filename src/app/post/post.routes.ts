@@ -1,20 +1,13 @@
-import { RouterModule } from '@angular/router';
+import { PostTableComponent } from '../post/post-table/post-table.component';
+import { WritePostComponent } from '../post/write-post/write-post.component';
+import { PostComponent } from './post.component';
 
-import { PostDetailMainComponent } from './post-detail-main/post-detail-main.component';
-import { PostlistComponent } from './postlist/postlist.component';
-
-export const postRoutes=[
-  {
-		path:'',
-		redirectTo:'page/1',
-		pathMatch:'full'
-	},
-	{
-		path:'page/:page',
-		component:PostlistComponent
-	},
-	{ 
-		path: 'postdetail/:postId', 
-		component: PostDetailMainComponent 
-	}
-];
+export const postRoutes = [{
+	path: '',
+	component: PostComponent,
+	children: [
+		{ path: '', redirectTo: 'posttable/page/1', pathMatch: 'full' },
+		{ path: 'posttable/page/:page', component: PostTableComponent },
+		{ path: 'writepost', component: WritePostComponent },
+	]
+}];

@@ -7,6 +7,16 @@
             <textarea *ngSwitchCase="'textarea'" value="{{field.value}}" rows="{{field.rows}}" class="form-control" [formControlName]="field.key"
                 placeholder="{{field.placeholder}}"></textarea>
             <img *ngSwitchCase="'image'" src="{{field.src}}">
+            <div *ngSwitchCase="'datepicker'" class="input-group" (click)="showDatepicker()">
+                <input type="text" class="form-control" value="{{field.value | date: 'yyyy-MM-dd'}}"  placeholder="{{field.placeholder}}" readonly>
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                
+            </div>
+            <div *ngSwitchCase="'datepicker'" class="datepicker-dropdown" [hidden]="isHidden">
+                <datepicker (selectionDone)="selectionDone()" [formControlName]="field.key" [(ngModel)]="field.value"></datepicker>
+            </div>
         </div>
     </div>
 </div>

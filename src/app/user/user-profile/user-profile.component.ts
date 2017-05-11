@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { FieldBase, Textbox, TextArea, Image } from './dynamic-form/form-field';
+import { FieldBase, Textbox, TextArea, Image, Datepicker } from './dynamic-form/form-field';
 
 @Component({
   selector: 'app-user-profile',
@@ -42,6 +42,10 @@ export class UserProfileComponent implements OnInit {
       label: "个人简介:",
       placeholder: "个人简介，最多140字，不能放链接。",
       rows: 3,
+    }),
+    new Datepicker({
+      label: '出生日期',
+      placeholder: '点击选择日期'
     })
   ];
 
