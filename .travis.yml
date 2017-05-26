@@ -5,3 +5,5 @@ before_install:
   - npm install -g @angular/cli@latest
 
 sudo: true
+
+script: ng e2e
