@@ -10,10 +10,16 @@ addons:
 language: node_js
 node_js: 
   - '6.10.3'
+
 before_install: 
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - npm install -g @angular/cli@latest
 
+script: 
+  - ng e2e
 
+cache:
+  directories:
+    - node_modules
   		  
