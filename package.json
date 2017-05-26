@@ -1,13 +1,14 @@
 {
-  "name": "NiceFish-Admin",
+  "name": "nicefish-admin",
   "version": "0.0.8",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng init && ng test --watch=false --single-run=true --code-coverage",
+    "test": "ng test --watch=false --single-run=true --code-coverage",
     "lint": "ng lint",
+    "pree2e": "webdriver-manage update",
     "e2e": "ng e2e"
   },
   "private": true,
