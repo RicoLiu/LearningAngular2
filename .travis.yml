@@ -1,5 +1,7 @@
 language: node_js
 node_js: 
   - '6.10.3'
+before_install: 
+  - npm install -g @angular/cli@latest
 
-script: ng e2e
+sudo: true
